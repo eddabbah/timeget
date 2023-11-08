@@ -1,0 +1,17 @@
+name: Modify Log File
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  modify-log:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Modify Log File
+        run: python modify_log.py
