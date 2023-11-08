@@ -15,3 +15,8 @@ jobs:
 
       - name: Modify Log File
         run: python modify_log.py
+      - name: Commit and push changes
+        uses: devops-infra/action-commit-push@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          commit_message: Replaced foo with bar
